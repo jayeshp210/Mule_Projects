@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="6ac8d29b-91d4-47f2-95fd-9635e92e6b09">
+		<http:listener-connection host="0.0.0.0" port="8081" readTimeout="20000" />
+	</http:listener-config>
+	<flow name="sampleFlow" doc:id="74060a29-e29b-4185-9db0-3ae3ab71f92a" >
+		<http:listener doc:name="Listener" doc:id="30f6920a-8496-4d0c-8e8c-a5beafc32794" path="x" allowedMethods="POST" config-ref="HTTP_Listener_config">
+			<ee:repeatable-file-store-stream bufferUnit="MB" />
+		</http:listener>
+		<set-payload value='#[payload]' doc:name="Set Payload" doc:id="653994e5-3623-4e10-a052-5a52fc9625a6" />
+		<logger level="INFO" doc:name="Logger" doc:id="b99a0d37-f70b-49d6-a267-2357a3071b48" message="hello"/>
+	</flow>
+</mule>

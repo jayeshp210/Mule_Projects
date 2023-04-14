@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7b824d22-e41b-4a50-acc0-715519fcb043" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<db:config name="demo" doc:name="Database Config" doc:id="4167e1bf-32a2-4707-b0cf-2d0424e87114" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="root" database="demo"/>
+	</db:config>
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="61e4ec3d-cf96-4054-bcbf-1fd9f39dd7e8" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<flow name="database_connectorFlow" doc:id="0e3500d4-6d63-40f7-af2d-dcb0cd9fb11a" >
+		<http:listener doc:name="Listener" doc:id="43966255-d08a-4a12-88c7-780f1930c3bb" config-ref="HTTP_Listener_config" path="/write-file"/>
+		<db:select doc:name="Select" doc:id="96a69d6d-cfe9-4f2a-9233-732e83579f44" config-ref="demo">
+			<db:sql ><![CDATA[SELECT * FROM persons 
+]]></db:sql>
+		</db:select>
+		<ee:transform doc:name="Transform Message" doc:id="f88c7825-00ba-4de0-a9ad-66a45d0fe9a5" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+[
+	payload
+]
+]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+	<flow name="database_connectorFlow1" doc:id="3f5d25df-6598-450b-95cf-905710a1212c" >
+		<http:listener doc:name="Listener" doc:id="47551fb6-e215-43f5-b4ce-2960a4872bce" config-ref="HTTP_Listener_config1" path="/insert" />
+		<db:insert doc:name="Insert" doc:id="b4d16ffb-a041-41cd-9a13-c8a6e68bf082" config-ref="demo">
+			<db:sql ><![CDATA[insert into persons values (10,"Nasir","Amir","Shanmukha ","Hyderabad")]]></db:sql>
+		</db:insert>
+		<ee:transform doc:name="Transform Message" doc:id="df83db47-5c3a-4e57-87af-e1495dc6b70c" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+[
+	payload
+]
+]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+	<flow name="database_connectorFlow2" doc:id="31f8eb5c-6e3f-4dd8-af46-09f8e7f925e2" >
+		<http:listener doc:name="Listener" doc:id="002957be-b9cb-4bdd-98e6-33d0751febda" config-ref="HTTP_Listener_config1" path="/bulk-insert" />
+		<db:bulk-insert doc:name="Bulk insert" doc:id="4dbdf670-2d03-4483-9c4e-b3792c4aa6d5" config-ref="demo">
+			<db:bulk-input-parameters ><![CDATA[#[%dw 2.0
+output application/java
+---
+[
+	{
+	id:13,
+	lname:"phulriya",
+	fname:"vishal",
+	address:"shanmukha",
+	city:"Hyderabad"
+	},
+	{
+	id:14,
+	lname:"gupta",
+	fname:"Dipesh",
+	
+	address:"shanmukha",
+	city:"Hyderabad"
+	}
+]]]]></db:bulk-input-parameters>
+			<db:sql ><![CDATA[insert into persons values (:id,:lname,:fname,:address,:city)]]></db:sql>
+		</db:bulk-insert>
+		<set-payload value='#["Bulk insert successfull"]' doc:name="Set Payload" doc:id="1739fec2-8fa6-4b79-82da-15743343a45f" />
+	</flow>
+</mule>
