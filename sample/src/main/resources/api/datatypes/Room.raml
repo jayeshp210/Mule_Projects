@@ -1,0 +1,12 @@
+#%RAML 1.0 DataType
+type: objects
+properties:
+  RoomId:
+  RoomType:
+    type: string
+    enum:
+      - single room
+      - double room
+      - single deluxe
+      - twin room
+  amount: number
