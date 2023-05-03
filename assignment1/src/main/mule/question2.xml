@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d5e3876e-714c-4eac-82cc-13237d5ffd6a" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<file:config name="File_Config" doc:name="File Config" doc:id="666432f4-013c-4c65-866c-b34a77decffa" >
+		<file:connection workingDir="C:\Users\JAYPALIW\Documents\temp_details\json" />
+	</file:config>
+	<file:config name="File_Config1" doc:name="File Config" doc:id="104292e0-a8a0-4831-ab04-0af6e108165c" />
+	<flow name="question2Flow1" doc:id="a482f515-cc65-4ad1-ad06-c0286bbcc9e3" >
+		<file:listener doc:name="On New or Updated File" doc:id="d0c87a17-5830-44ab-8a6e-ca9669dd44b7" directory="C:\Users\JAYPALIW\Documents\temp_details\json" watermarkMode="MODIFIED_TIMESTAMP" config-ref="File_Config1">
+			<scheduling-strategy >
+				<fixed-frequency timeUnit="SECONDS" frequency="30"/>
+			</scheduling-strategy>
+		</file:listener>
+		<file:list doc:name="List" doc:id="f0426005-c784-464a-af40-49192758ee81" directoryPath="C:\Users\JAYPALIW\Documents\temp_details\json"/>
+		<logger level="INFO" doc:name="Logger" doc:id="fc57b71a-6bc3-4aec-8767-5496f1a05be7" message="#[%dw 2.0&#10;output application/json&#10;---&#10;payload.payload]" />
+		<ee:transform doc:name="Transform Message" doc:id="6ecb72cf-a382-4150-b73e-88b78989022a" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
+---
+array: {(payload map (n,idx)->
+	({
+		"name":n.payload.name,
+		"email":n.payload.email
+		
+	})
+)}
+	
+]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="71c54fcd-f1d3-4e7d-b392-f3b759a50f30" message="#[payload]"/>
+		<file:write doc:name="Write" doc:id="79b260aa-0a9c-46fa-b7b6-4401c4c66956" path="C:\Users\JAYPALIW\Documents\temp_details\xml\output.xml" config-ref="File_Config" />
+	</flow>
+	<flow name="question2Flow" doc:id="fa563441-ce38-4576-b21c-bc1d802404d1" >
+		<http:listener doc:name="Listener" doc:id="ced7aa3a-a907-41b0-90dd-c345b5af9b35" config-ref="HTTP_Listener_config" path="/question2" />
+		<logger level="INFO" doc:name="Logger" doc:id="cab7bbe6-581c-4c80-a22b-d12c66c0293c" message="#[payload]" />
+		<file:read doc:name="Read" doc:id="688c23ea-c44d-42bf-89ac-eb9f43a58286" path="C:\Users\JAYPALIW\Documents\temp_details\xml\output.xml"/>
+		<ee:transform doc:name="Transform Message" doc:id="6443338f-4129-4c3f-8e8a-fa6464a9728b" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>

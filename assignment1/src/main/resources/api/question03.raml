@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: question03
+version: v1
+/create-employee:
+  post:
+    body:
+      application/json:
+        type: object
+        properties:
+          employeeID:
+            required: true
+            type: integer
+            example: 35355
+          employeeName:
+            required: true
+            type: string
+            example: "Jayesh"
+          employeeStatus:
+            required: true
+            type: string
+            example: "A"
+        example:
+          {
+                "employeeID": 100,
+                "employeeName": "Paliwal",
+                "employeeStatus": "A"
+          }
+    responses:
+      200:
+      

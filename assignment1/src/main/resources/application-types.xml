@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="sdas" format="json">
+      <types:shape format="weave" example="examples/file1.json"><![CDATA[%dw 2.0
+
+type sdas = {|
+  menu: {|
+    id: String, 
+    value: String, 
+    popup: {|
+      menuitem: Array<{|        value: String,         onclick: String      |}>
+    |}
+  |}
+|} {"example": "{\\\"menu\\\":{\\\"id\\\":\\\"file1\\\",\\\"value\\\":\\\"File\\\",\\\"popup\\\":{\\\"menuitem\\\":[{\\\"value\\\":\\\"New\\\",\\\"onclick\\\":\\\"CreateDoc()\\\"},{\\\"value\\\":\\\"Open\\\",\\\"onclick\\\":\\\"OpenDoc()\\\"},{\\\"value\\\":\\\"Save\\\",\\\"onclick\\\":\\\"SaveDoc()\\\"}]}}}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="sda" format="json">
+      <types:shape format="weave" example="examples/file2.json"><![CDATA[%dw 2.0
+
+type sda = Array<{|  name: String,   email: String|}> {"example": "[{\\\"name\\\":\\\"Rama\\\",\\\"email\\\":\\\"Ram@gmail.com\\\"},{\\\"name\\\":\\\"Bob\\\",\\\"email\\\":\\\"bob32@gmail.com\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="dasds" format="json">
+      <types:shape format="weave" example="examples/hi.json"><![CDATA[%dw 2.0
+
+type dasds = Array<{|  inboundAttachmentNames: Array<Any>, 
+  exceptionPayload: Null, 
+  inboundPropertyNames: Array<Any>, 
+  outboundAttachmentNames: Array<Any>, 
+  payload: Array<{|    name: String,     email: String  |}>, 
+  outboundPropertyNames: Array<Any>, 
+  attributes: {|
+    lastModifiedTime: String, 
+    lastAccessTime: String, 
+    creationTime: String, 
+    symbolicLink: Boolean, 
+    regularFile: Boolean, 
+    directory: Boolean, 
+    path: String, 
+    size: Number {"typeId": "int"}, 
+    name: String
+  |}
+|}> {"example": "[{\\\"inboundAttachmentNames\\\":[],\\\"exceptionPayload\\\":null,\\\"inboundPropertyNames\\\":[],\\\"outboundAttachmentNames\\\":[],\\\"payload\\\":[{\\\"name\\\":\\\"Rama ja\\\",\\\"email\\\":\\\"Ram@gmail.com\\\"},{\\\"name\\\":\\\"Bob\\\",\\\"email\\\":\\\"bob32@gmail.com\\\"}],\\\"outboundPropertyNames\\\":[],\\\"attributes\\\":{\\\"lastModifiedTime\\\":\\\"2023-04-26T10:33:14.513129\\\",\\\"lastAccessTime\\\":\\\"2023-04-26T10:33:14.513129\\\",\\\"creationTime\\\":\\\"2023-04-24T11:33:48.789326\\\",\\\"symbolicLink\\\":false,\\\"regularFile\\\":true,\\\"directory\\\":false,\\\"path\\\":\\\"C:\\\\\\\\Users\\\\\\\\JAYPALIW\\\\\\\\Documents\\\\\\\\temp_details\\\\\\\\json\\\\\\\\file2.json\\\",\\\"size\\\":109,\\\"name\\\":\\\"file2.json\\\"}},{\\\"inboundAttachmentNames\\\":[],\\\"exceptionPayload\\\":null,\\\"inboundPropertyNames\\\":[],\\\"outboundAttachmentNames\\\":[],\\\"payload\\\":[{\\\"name\\\":\\\"Ravana\\\",\\\"email\\\":\\\"Ravan@gmail.com\\\"},{\\\"name\\\":\\\"Bob Marshak\\\",\\\"email\\\":\\\"bobmarshal32@gmail.com\\\"}],\\\"outboundPropertyNames\\\":[],\\\"attributes\\\":{\\\"lastModifiedTime\\\":\\\"2023-04-26T10:29:06.773351\\\",\\\"lastAccessTime\\\":\\\"2023-04-26T10:29:06.773351\\\",\\\"creationTime\\\":\\\"2023-04-24T11:33:13.569259\\\",\\\"symbolicLink\\\":false,\\\"regularFile\\\":true,\\\"directory\\\":false,\\\"path\\\":\\\"C:\\\\\\\\Users\\\\\\\\JAYPALIW\\\\\\\\Documents\\\\\\\\temp_details\\\\\\\\json\\\\\\\\file4.json\\\",\\\"size\\\":130,\\\"name\\\":\\\"file4.json\\\"}}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#6ecb72cf-a382-4150-b73e-88b78989022a">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="dasds"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

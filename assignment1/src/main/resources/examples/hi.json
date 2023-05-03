@@ -1,0 +1,74 @@
+[
+  {
+    "inboundAttachmentNames": [
+      
+    ],
+    "exceptionPayload": null,
+    "inboundPropertyNames": [
+      
+    ],
+    "outboundAttachmentNames": [
+      
+    ],
+    "payload": [
+      {
+        "name": "Rama ja",
+        "email": "Ram@gmail.com"
+      },
+      {
+        "name": "Bob",
+        "email": "bob32@gmail.com"
+      }
+    ],
+    "outboundPropertyNames": [
+      
+    ],
+    "attributes": {
+      "lastModifiedTime": "2023-04-26T10:33:14.513129",
+      "lastAccessTime": "2023-04-26T10:33:14.513129",
+      "creationTime": "2023-04-24T11:33:48.789326",
+      "symbolicLink": false,
+      "regularFile": true,
+      "directory": false,
+      "path": "C:\\Users\\JAYPALIW\\Documents\\temp_details\\json\\file2.json",
+      "size": 109,
+      "name": "file2.json"
+    }
+  },
+  {
+    "inboundAttachmentNames": [
+      
+    ],
+    "exceptionPayload": null,
+    "inboundPropertyNames": [
+      
+    ],
+    "outboundAttachmentNames": [
+      
+    ],
+    "payload": [
+      {
+        "name": "Ravana",
+        "email": "Ravan@gmail.com"
+      },
+      {
+        "name": "Bob Marshak",
+        "email": "bobmarshal32@gmail.com"
+      }
+    ],
+    "outboundPropertyNames": [
+      
+    ],
+    "attributes": {
+      "lastModifiedTime": "2023-04-26T10:29:06.773351",
+      "lastAccessTime": "2023-04-26T10:29:06.773351",
+      "creationTime": "2023-04-24T11:33:13.569259",
+      "symbolicLink": false,
+      "regularFile": true,
+      "directory": false,
+      "path": "C:\\Users\\JAYPALIW\\Documents\\temp_details\\json\\file4.json",
+      "size": 130,
+      "name": "file4.json"
+    }
+  }
+]
