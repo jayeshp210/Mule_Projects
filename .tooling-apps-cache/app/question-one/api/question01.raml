@@ -1,0 +1,136 @@
+#%RAML 1.0 
+title: question01
+version: v1
+/error-message: 
+  description: Create RAML with GET and POST endpoint. Also, implement these methods with APIkit router in the mule application. Implement custom error message in error handling scenario for ‘404 NOT FOUND’ and ‘400 Bad Request’
+  get:
+    body:
+      application/json:
+        type: object
+        properties:
+          email:
+            type: string
+            example:
+              "ayush123@outlook.com"
+    responses:
+      200:
+        body:
+          application/json:
+            type: object
+            properties:
+              status:
+                type: number
+                required: true
+                example: 200
+              message:
+                type: string
+                required: true
+                example: "Success"
+            example:
+              {
+                "status": 200,
+                  "message": “Success”
+              }
+      
+      400:
+        description: 
+        body:
+          application/json:
+            type: object
+            properties:
+              status:
+                type: number
+                required: true
+                example: 400
+              message:
+                type: string
+                required: true
+                example: "Bad Request"
+            example:
+              {
+		              "status": 400,
+                  "message": “400 Bad Request”
+		          }
+      404:
+        body:
+          application/json:
+            type: object
+            properties:
+              status:
+                type: integer
+                required: true
+                example: 404
+              message:
+                type: string
+                required: true
+                example: "Not Found"
+            example:
+              {
+		              "status": 404,
+                  "message": “404 NOT FOUND”
+		          }
+  post:
+    body:
+      application/json:
+        type: object
+        properties:
+          email:
+            required: true
+            type: string
+            example:
+              "ayush123@outlook.com"
+    responses:
+      200:
+        body:
+          application/json:
+            type: object
+            properties:
+              status:
+                type: number
+                required: true
+                example: 200
+              message:
+                type: string
+                required: true
+                example: "Success"
+            example:
+              {
+                "status": 200,
+                  "message": “Success”
+              }
+      400:
+        body:
+          application/json:
+            type: object
+            properties:
+              status:
+                type: number
+                required: true
+                example: 400
+              message:
+                type: string
+                required: true
+                example: "Bad Request"
+            example:
+              {
+		              "status": 400,
+                  "message": “400 Bad Request”
+		          }
+      404:
+        body:
+          application/json:
+            type: object
+            properties:
+              status:
+                type: number
+                required: true
+                example: 404
+              message:
+                type: string
+                required: true
+                example: "Not Found"
+            example:
+              {
+		              "status": 404,
+                  "message": “404 NOT FOUND”
+		          }

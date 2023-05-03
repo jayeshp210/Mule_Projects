@@ -1,0 +1,27 @@
+[
+    {
+        "employeeID": 101,
+        "employeeName": "Aviral Shukla",
+        "employeeStatus": "A"
+    },
+    {
+        "employeeID": 102,
+        "employeeName": "Hrishab Anand",
+        "employeeStatus": "A"
+    },
+    {
+        "employeeID": 103,
+        "employeeName": "Gulshan Kumar",
+        "employeeStatus": "A"
+    },
+    {
+        "employeeID": 104,
+        "employeeName": "Harmeet Singh",
+        "employeeStatus": "A"
+    },
+    {
+        "employeeID": 101,
+        "employeeName": "Ashutosh Naik",
+        "employeeStatus": "H"   
+    }
+]

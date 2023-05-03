@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="dads" format="json">
+      <types:shape format="weave" example="examples/file2.json"><![CDATA[%dw 2.0
+
+type dads = Array<{|  name: String,   email: String|}> {"example": "[{\\\"name\\\":\\\"Ram\\\",\\\"email\\\":\\\"Ram@gmail.com\\\"},{\\\"name\\\":\\\"Bob\\\",\\\"email\\\":\\\"bob32@gmail.com\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="ksda" format="java">
+      <types:shape format="raml"><![CDATA[#%RAML 1.0 DataType
+type: string]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#727a3f5b-e57e-496e-a28d-629a053e998a">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="dads"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

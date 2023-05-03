@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<file:config name="File_Config" doc:name="File Config" doc:id="24e81e5c-e5b1-4c58-88ed-47a0b65612a6" >
+		<file:connection workingDir="C:\Users\JAYPALIW\Documents\temp_details\json" />
+	</file:config>
+	<flow name="flow1" doc:id="faee7149-675c-4491-9b19-bad3eacfbd40" >
+		<file:listener doc:name="On New or Updated File" doc:id="e94bac2c-538b-407b-885b-efbcc469b659" config-ref="File_Config" directory="C:\Users\JAYPALIW\Documents\temp_details\json">
+			<scheduling-strategy >
+				<fixed-frequency />
+			</scheduling-strategy>
+		</file:listener>
+		<ee:transform doc:name="Transform Message" doc:id="727a3f5b-e57e-496e-a28d-629a053e998a" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
+---
+array  : { (payload map(item,idx)->(idx):item) }]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<file:write doc:name="Write" doc:id="11671769-79ef-4678-9a2e-9f93e92d587b" path="C:\Users\JAYPALIW\Documents\temp_details\xml\temp.xml"/>
+	</flow>
+	<flow name="flow2" doc:id="9a0ad8a0-cb18-416c-be26-c914a31cf334" >
+		<http:listener doc:name="Listener" doc:id="5c317708-c67d-4e34-a35a-2b5d6c80b153" config-ref="HTTP_Listener_config" path="/fax"/>
+		<file:read doc:name="Read" doc:id="c46c524f-96a4-4e0e-8aa4-1d5846f0c542" path="C:\Users\JAYPALIW\Documents\temp_details\xml\temp.xml"/>
+		<ee:transform doc:name="Transform Message" doc:id="02d9ce1b-bdca-4fbf-a0da-a2f0274adbdb" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>

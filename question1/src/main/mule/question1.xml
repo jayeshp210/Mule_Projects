@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:cloudhub="http://www.mulesoft.org/schema/mule/cloudhub"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/cloudhub http://www.mulesoft.org/schema/mule/cloudhub/current/mule-cloudhub.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<cloudhub:config name="CloudHub_Config" doc:name="CloudHub Config" doc:id="d813b29d-5767-43ee-8b4c-c9d23528fba0" >
+		<cloudhub:connection username="jayesh210" password="Jay@6350" />
+	</cloudhub:config>
+	<flow name="question1Flow" doc:id="88f92eaa-d359-4b94-b677-f6012ab44fb4" >
+		<http:listener doc:name="Listener" doc:id="6e1439e7-a843-44ad-b6e5-90726e22a816" />
+		<cloudhub:create-notification doc:name="Create Notification" doc:id="5b36234e-7f58-49fd-87b4-d2c3879f0243" config-ref="CloudHub_Config"/>
+	</flow>
+</mule>

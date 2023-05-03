@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="38443dda-8e2c-4dee-b7f7-e7d9996266d3" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<file:config name="File_Config" doc:name="File Config" doc:id="05aa7adb-1cb6-438b-8c82-078a7a928c8c" >
+		<file:connection workingDir="C:\Users\avshukla\Documents\Json" />
+	</file:config>
+	<flow name="question-twoFlow" doc:id="142825a1-315a-41e3-8a0a-8bc4c4c60dca" >
+		<http:listener doc:name="Listener" doc:id="73768eb7-acdb-4a31-a358-d4323c28ce09" config-ref="HTTP_Listener_config" path="/question-two"/>
+		<file:read doc:name="Read" doc:id="5eed0525-2fc8-4f42-8579-13c7602de5a8" config-ref="File_Config" path="C:\Users\avshukla\Documents\XML\getemployees.xml"/>
+		<logger level="INFO" doc:name="Logger" doc:id="95be9d3c-9005-42c3-bc64-df55631d7260" message="#[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="3a42ff48-bcbd-45ea-ae50-e64d3d593fa4" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+	<flow name="question-twoFlow1" doc:id="68c26854-6944-4609-8115-6ae9576aca9b" >
+		<file:listener doc:name="On New or Updated File" doc:id="044a0e68-4784-4290-a6d1-dc9b43fde939" config-ref="File_Config">
+			<scheduling-strategy >
+				<fixed-frequency frequency="30" timeUnit="SECONDS" />
+			</scheduling-strategy>
+		</file:listener>
+		<logger level="INFO" doc:name="Logger" doc:id="bb761d57-33b9-487a-b9c4-288d314660e5" message="#[payload]"/>
+		<file:list doc:name="List" doc:id="696a05a3-d03a-4861-8d88-cc810e340ccc" directoryPath="C:\Users\avshukla\Documents\Json"/>
+		<ee:transform doc:name="Transform Message" doc:id="b0c1e58b-555a-473c-9b7a-2be32582f44b" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+
+output application/xml
+var key=0
+var n={}
+---
+//("a") :{(payload map ((item, index) -> (index + 1):item))}
+array:{(payload )}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="035255d0-608e-42a9-91dd-21b99c0f6936" message="#[payload]"/>
+		<file:write doc:name="Write" doc:id="9d52cbb7-45b5-44a3-9cbe-26223469e937" config-ref="File_Config" path="C:\Users\avshukla\Documents\XML\getemployees.xml" mode="APPEND"/>
+	</flow>
+</mule>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a701a09e-c50b-450d-8092-b3c045ff5416" tracking:enable-default-events="false" initialState="" bussinessEventsLabel="" maxConcurrency="">
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="file_connectorFlow1" doc:id="e3293d76-a047-44d6-a7c4-a5d57db04cfe" >
+		<file:listener doc:name="On New or Updated File" doc:id="2f802378-f8d2-4139-834f-9321c516a59f" directory="C:\Users\JAYPALIW\Documents\temp_details\json" moveToDirectory="C:\Users\JAYPALIW\Documents\temp_details\xml">
+			<scheduling-strategy>
+				<fixed-frequency frequency="10" timeUnit="SECONDS" />
+			</scheduling-strategy>
+		</file:listener>
+	</flow>
+	<flow name="file_connectorFlow" doc:id="c7004faf-8791-445c-974b-2c5c6d813271" >
+		<file:list doc:name="List" doc:id="aad0f585-712d-44cb-af73-70db106875b0" directoryPath="C:\Users\JAYPALIW\Documents\temp_details"/>
+		<ee:transform doc:name="Transform Message" doc:id="6278cb7a-fa7b-4435-b975-ad7209b81e67" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+var arr = payload map(n,item)-> n.payload
+---
+arr
+//payload
+
+	
+]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<file:write doc:name="Write" doc:id="5429f203-415f-4425-ab60-33e1c4776ab2" path="C:\Users\JAYPALIW\Documents\temp_details\Newfile.txt" mode="APPEND"/>
+	</flow>
+</mule>
