@@ -27,8 +27,7 @@ output application/xml
 array: {( payload )}]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<set-payload value="#[attributes.fileName]" doc:name="Set Payload" doc:id="4e87b521-da1b-498a-92be-9c3560a95590" />
-		<file:write doc:name="Write" doc:id="29cc158e-edf8-4116-aabb-efc6dfbe623b" path="#[%dw 2.0&#10;var s = attributes.fileName splitBy(&quot;.&quot;)&#10;var val=s[0]&#10;output plain/text  &#10;---&#10;'C:\Users\JAYPALIW\Documents\temp_details - Copy\xml\${val}']" mode="CREATE_NEW" />
+		<file:write doc:name="Write" doc:id="29cc158e-edf8-4116-aabb-efc6dfbe623b" path="#['C:/Users/JAYPALIW/Documents/temp_details - Copy/xml/' ++ (attributes.fileName splitBy(&quot;.&quot;))[0] ++ &quot;.xml&quot;]" mode="CREATE_NEW" />
 	</flow>
 	<flow name="question_two_newFlow" doc:id="08c757d0-0dac-4af2-b6c9-a3b9cae9a1ef" >
 		<http:listener doc:name="Listener" doc:id="500d61ac-93c2-4669-8a38-b7e3c8ee33ec" path="/read" config-ref="HTTP_Listener_config"/>
