@@ -6,5 +6,4 @@
 type: string]]></types:shape>
     </types:type>
   </types:catalog>
-  <types:enrichment select="#445bcee5-04d1-436a-b06f-68ed6a8c07f2"/>
 </types:mule>

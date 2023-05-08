@@ -18,7 +18,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 				<fixed-frequency frequency="30" timeUnit="SECONDS" />
 			</scheduling-strategy>
 		</file:listener>
-		<logger level="INFO" doc:name="Logger" doc:id="445bcee5-04d1-436a-b06f-68ed6a8c07f2" message="#[payload]"/>
 		<ee:transform doc:name="Transform Message" doc:id="4f595e5d-379d-4c4c-b36c-fef942ef3177" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
