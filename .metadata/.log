@@ -985,3 +985,1323 @@ java.lang.Exception: Resource '/debugger_demo/src/main/resources/weave' already 
 	at org.mule.tooling.metadata.custom.metadata.assistant.CustomMetadataAssistantService.processMetadata(CustomMetadataAssistantService.java:374)
 	at org.mule.tooling.metadata.custom.metadata.assistant.CustomMetadataAssistantService$TranslatePersistAndAssignMetadata.run(CustomMetadataAssistantService.java:228)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-12 00:51:57.017
+!MESSAGE  *** 1971 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2023-05-12 09:41:45.816
+!MESSAGE There was a problem updating the cached tooling project for [Mule Project] Name: debugger_demo - Domain: default. Removing from cache.
+!STACK 0
+org.mule.tooling.core.ComponentNotAvailableInContext: Mule project is null in design context
+!SESSION 2023-05-13 17:38:06.225 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-05-13 17:38:14.698
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-13 17:38:14.698
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54ec8ab3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@71b32407,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-13 17:38:19.065
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:38:20.714
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:38:40.383
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\393\data\.runtimes\tooling-uktngxnt
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-13 17:52:20.843
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+!SESSION 2023-05-13 17:52:23.870 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-05-13 17:54:34.308
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-13 17:54:34.308
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e0c898c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1cd2e348,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-13 17:54:36.678
+!MESSAGE Creating MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:54:38.787
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-13 17:54:44.298
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:55:02.511
+!MESSAGE Tooling workspace is C:\Users\JAYPALIW\AnypointStudio\studio-workspace\.tooling-apps-cache
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-13 17:55:06.769
+!MESSAGE  *** 4029 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 2 0 2023-05-13 17:55:06.785
+!MESSAGE Log output for packaging project wt5-1_apdev-flights-ws_solution
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< com.mycompany:wt5-1_apdev-flights-ws_solution >------------
+[INFO] Building wt5-1_apdev-flights-ws_solution 1.0.0-SNAPSHOT
+[INFO] --------------------------[ mule-application ]--------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:3.0.0 is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.584 s
+[INFO] Finished at: 2023-05-13T17:55:06+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Plugin org.apache.maven.plugins:maven-clean-plugin:3.0.0 or one of its dependencies could not be resolved: Cannot access mulesoft-releases (https://repository.mulesoft.org/releases/) in offline mode and the artifact org.apache.maven.plugins:maven-clean-plugin:jar:3.0.0 has not been downloaded from it before. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
+
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:55:07.765
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\393\data\.runtimes\tooling-uktngxnt
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-13 17:55:18.179
+!MESSAGE  *** 11379 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:55:33.676
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-wsc-connector, org.mule.modules:mule-apikit-module, 68ef9520-24e9-4cf2-b2f5-620025690913:mule-plugin-training-american-flights-api, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector, org.mule.modules:mule-validation-module]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-13 17:55:42.136
+!MESSAGE Check finished: there are updates for some Mule Modules
+!SESSION 2023-05-15 09:56:55.691 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-05-15 09:58:04.476
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:58:04.476
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f7b7720,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e0c898c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 09:58:08.516
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-15 09:58:12.692
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 09:58:36.136
+!MESSAGE Tooling workspace is C:\Users\JAYPALIW\AnypointStudio\studio-workspace\.tooling-apps-cache
+
+!ENTRY org.eclipse.jface 2 0 2023-05-15 09:58:36.795
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:58:36.795
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24af33a1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ad51ba4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@109f7381,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 09:58:36.812
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\393\data\.runtimes\tooling-itgdverb
+
+!ENTRY org.eclipse.jface 2 0 2023-05-15 09:58:36.986
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:58:36.986
+!MESSAGE A conflict occurred for CTRL+SHIFT+K:
+Binding(CTRL+SHIFT+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findPrevious,Find Previous,
+		Find previous item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15bb197,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findPrevious,Find Previous,
+		Find previous item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15bb197,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:58:36.986
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3313002e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.openFlow,Open Flow,
+		Search For Flows in the current workspace,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3002acf9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:58:36.986
+!MESSAGE A conflict occurred for CTRL+K:
+Binding(CTRL+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findNext,Find Next,
+		Find next item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34668a96,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findNext,Find Next,
+		Find next item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34668a96,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:58:36.986
+!MESSAGE A conflict occurred for CTRL+SHIFT+X:
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.upperCase,To Upper Case,
+		Changes the selection to upper case,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@686d5284,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.mule.tooling.runtime.muleLaunchShortcut.run,Run Mule Application,
+		Run Mule Application,
+		Category(org.mule.tooling.runtime.ui.category,Runtime Category,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43542dd7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-15 09:58:42.857
+!MESSAGE  *** 6561 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.eclipse.jface 2 0 2023-05-15 09:59:01.789
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:59:01.789
+!MESSAGE A conflict occurred for F2:
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@745f4c49,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.showInformation,Show Tooltip Description,
+		Displays information for the current caret location in a focused hover,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2631075f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2023-05-15 09:59:01.797
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 09:59:01.797
+!MESSAGE A conflict occurred for CTRL+7:
+Binding(CTRL+7,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@360fe828,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+7,
+	ParameterizedCommand(Command(org.mule.tooling.messageflow.editor.comment,Toggle Comment,
+		Toggle comment for the selected processors,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7fe5dd5c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.keybindings.contexts.muleStudioFocus,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 09:59:04.014
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-wsc-connector, 68ef9520-24e9-4cf2-b2f5-620025690913:mule-plugin-training-american-flights-api, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector, org.mule.modules:mule-validation-module]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 09:59:10.274
+!MESSAGE Check finished: there are updates for some Mule Modules
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-15 10:11:12.880
+!MESSAGE  *** 3005 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-15 16:02:48.585
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+!SESSION 2023-05-15 23:55:38.416 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-05-15 23:55:46.494
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-15 23:55:46.494
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f7b7720,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e0c898c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-15 23:55:49.366
+!MESSAGE Creating MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 23:55:51.740
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-15 23:55:57.851
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 23:56:30.995
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\393\data\.runtimes\tooling-itgdverb
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 23:56:45.815
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-file-connector, org.mule.connectors:mule-objectstore-connector, org.mule.connectors:mule-vm-connector, com.mulesoft.connectors:mule-salesforce-connector, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector, org.mule.connectors:mule-jms-connector, org.mule.connectors:mule-db-connector]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-15 23:56:57.307
+!MESSAGE Check finished: there are updates for some Mule Modules
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-16 01:51:22.505
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+!SESSION 2023-05-16 10:45:23.965 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 10:45:33.163
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 10:45:33.163
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27aa7294,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d10df04,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-16 10:45:36.026
+!MESSAGE Creating MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 10:45:38.987
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-16 10:45:51.527
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 10:46:29.610
+!MESSAGE Tooling workspace is C:\Users\JAYPALIW\AnypointStudio\studio-workspace\.tooling-apps-cache
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 10:46:32.492
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-file-connector, org.mule.connectors:mule-objectstore-connector, org.mule.connectors:mule-vm-connector, com.mulesoft.connectors:mule-salesforce-connector, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-jms-connector, org.mule.connectors:mule-http-connector, org.mule.connectors:mule-db-connector]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 10:46:33.158
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\393\data\.runtimes\tooling-itgdverb
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-16 10:46:37.589
+!MESSAGE  *** 7805 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 10:46:44.239
+!MESSAGE Check finished: there are updates for some Mule Modules
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 10:46:44.944
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 10:46:44.944
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ce01617,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b2af5ed,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7324bca8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-16 11:43:23.474
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.utils 4 0 2023-05-16 11:43:23.558
+!MESSAGE Unexpected error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NullPointerException
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:131)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleXMLValidator.validate(MuleXMLValidator.java:61)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	... 23 more
+!SUBENTRY 1 org.mule.tooling.core 4 0 2023-05-16 11:43:23.558
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleXMLValidator.validate(MuleXMLValidator.java:61)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.utils 4 0 2023-05-16 11:43:23.563
+!MESSAGE Unexpected error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NullPointerException
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:131)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	... 23 more
+!SUBENTRY 1 org.mule.tooling.core 4 0 2023-05-16 11:43:23.563
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.utils 4 0 2023-05-16 11:43:23.567
+!MESSAGE Unexpected error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NullPointerException
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:131)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	... 23 more
+!SUBENTRY 1 org.mule.tooling.core 4 0 2023-05-16 11:43:23.567
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-05-16 11:43:25.164
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2023-05-16 11:43:26.144 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-05-16 11:43:31.809
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 11:43:34.373
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 11:43:34.373
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4987142d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3e3bf77b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-16 11:43:36.216
+!MESSAGE Creating MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 11:43:37.667
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-16 11:43:42.567
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2023-05-16 11:43:50.176
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:447)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:366)
+	at org.eclipse.swt.widgets.Text.setText(Text.java:2330)
+	at org.mule.tooling.ui.palette.view.PalettePage.clearFilterSearch(PalettePage.java:785)
+	at org.mule.tooling.ui.palette.view.PalettePage.refreshPalette(PalettePage.java:781)
+	at org.mule.tooling.ui.palette.view.PalettePage$1.onMuleModuleManagerRestarted(PalettePage.java:187)
+	at org.mule.tooling.core.event.MuleModuleManagerRestartedEvent.dispatch(MuleModuleManagerRestartedEvent.java:23)
+	at org.mule.tooling.core.event.MuleModuleManagerRestartedEvent.dispatch(MuleModuleManagerRestartedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.lambda$0(EventBus.java:202)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:166)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:368)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:230)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:560)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.run(IDEWorkbenchAdvisor.java:367)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:388)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2942)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1368)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1716)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1743)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1743)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1752)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:503)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:570)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:102)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:269)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1552)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4748)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-05-16 11:43:50.207
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:447)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:366)
+	at org.eclipse.swt.widgets.Text.setText(Text.java:2330)
+	at org.mule.tooling.ui.palette.view.PalettePage.clearFilterSearch(PalettePage.java:785)
+	at org.mule.tooling.ui.palette.view.PalettePage.refreshPalette(PalettePage.java:781)
+	at org.mule.tooling.ui.palette.view.PalettePage$1.onMuleModuleManagerRestarted(PalettePage.java:187)
+	at org.mule.tooling.core.event.MuleModuleManagerRestartedEvent.dispatch(MuleModuleManagerRestartedEvent.java:23)
+	at org.mule.tooling.core.event.MuleModuleManagerRestartedEvent.dispatch(MuleModuleManagerRestartedEvent.java:1)
+	at org.mule.tooling.utils.eventbus.EventBus$1.lambda$0(EventBus.java:202)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:166)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:368)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:230)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:560)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.run(IDEWorkbenchAdvisor.java:367)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:388)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2942)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1368)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1716)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1743)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1743)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1752)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:503)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:570)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:102)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:269)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1552)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4748)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-16 11:43:51.515
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.utils 4 0 2023-05-16 11:43:51.670
+!MESSAGE Unexpected error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NullPointerException
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:131)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	... 23 more
+!SUBENTRY 1 org.mule.tooling.core 4 0 2023-05-16 11:43:51.670
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.utils 4 0 2023-05-16 11:43:51.677
+!MESSAGE Unexpected error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NullPointerException
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:131)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	... 23 more
+!SUBENTRY 1 org.mule.tooling.core 4 0 2023-05-16 11:43:51.677
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.utils 4 0 2023-05-16 11:43:51.686
+!MESSAGE Unexpected error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NullPointerException
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:131)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	... 23 more
+!SUBENTRY 1 org.mule.tooling.core 4 0 2023-05-16 11:43:51.686
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.checkPreConditions(MuleConfigurationValidator.java:143)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:124)
+	at org.mule.tooling.core.builder.TransformerUtils.getValidationResults(TransformerUtils.java:122)
+	at org.mule.tooling.core.builder.TransformerUtils.addErrorsForFlow(TransformerUtils.java:101)
+	at org.mule.tooling.core.builder.TransformerUtils.validateConfigFile(TransformerUtils.java:85)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:42)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor$1.call(ValidationBuildVisitor.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithContext(StudioDesignContextRunner.java:200)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.validate(ValidationBuildVisitor.java:37)
+	at org.mule.tooling.core.builder.ValidationBuildVisitor.visitFile(ValidationBuildVisitor.java:31)
+	at org.mule.tooling.core.utils.MuleProjectResourceVisitor.visit(MuleProjectResourceVisitor.java:19)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.mule.tooling.core.builder.MuleBuilder$1.run(MuleBuilder.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-05-16 11:43:51.872
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-05-16 11:43:52.220
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.mule.tooling.client.startup.ToolingClientStartup$1
+!SESSION 2023-05-16 12:14:48.373 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-05-16 12:14:52.734
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 12:14:55.965
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:14:55.965
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67376bae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d6d81c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-16 12:14:58.126
+!MESSAGE Creating MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 12:15:00.641
+!MESSAGE Mule Version 4.4.0-20230217, was mapped to Tooling Version 4.4.0-20230217
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-16 12:15:08.046
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 12:15:36.433
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\393\data\.runtimes\tooling-2ai2dnlm
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 12:16:01.440
+!MESSAGE Tooling workspace is C:\Users\JAYPALIW\AnypointStudio\studio-workspace\.tooling-apps-cache
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 12:16:02.367
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:02.367
+!MESSAGE A conflict occurred for CTRL+7:
+Binding(CTRL+7,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40c29d65,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+7,
+	ParameterizedCommand(Command(org.mule.tooling.messageflow.editor.comment,Toggle Comment,
+		Toggle comment for the selected processors,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62fd90b6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.keybindings.contexts.muleStudioFocus,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:02.367
+!MESSAGE A conflict occurred for CTRL+SHIFT+K:
+Binding(CTRL+SHIFT+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findPrevious,Find Previous,
+		Find previous item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3dad282e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findPrevious,Find Previous,
+		Find previous item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3dad282e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:02.367
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6de41f86,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.openFlow,Open Flow,
+		Search For Flows in the current workspace,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39999eea,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:02.367
+!MESSAGE A conflict occurred for CTRL+K:
+Binding(CTRL+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findNext,Find Next,
+		Find next item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@376fd14f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+K,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findNext,Find Next,
+		Find next item,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@376fd14f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:02.367
+!MESSAGE A conflict occurred for CTRL+SHIFT+X:
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.upperCase,To Upper Case,
+		Changes the selection to upper case,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@635763d4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.mule.tooling.runtime.muleLaunchShortcut.run,Run Mule Application,
+		Run Mule Application,
+		Category(org.mule.tooling.runtime.ui.category,Runtime Category,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e824817,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 12:16:06.108
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector]
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 12:16:06.123
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:06.123
+!MESSAGE A conflict occurred for F2:
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15e281ee,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.showInformation,Show Tooltip Description,
+		Displays information for the current caret location in a focused hover,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ee3ca50,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-16 12:16:06.266
+!MESSAGE  *** 4715 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-16 12:16:10.399
+!MESSAGE Check finished: all Mule Modules are up to date
+
+!ENTRY org.eclipse.jface 2 0 2023-05-16 12:16:46.212
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-16 12:16:46.212
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@76bb9e9e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1483e1ea,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ac1a751,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-16 12:23:02.533
+!MESSAGE  *** 6868 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-16 12:24:34.635
+!MESSAGE  *** 5725 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-16 12:25:37.900
+!MESSAGE  *** 5576 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-16 12:58:59.974
+!MESSAGE  *** 5961 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-17 12:48:04.669
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir

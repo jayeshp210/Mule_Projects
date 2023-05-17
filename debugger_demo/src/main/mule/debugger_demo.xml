@@ -7,10 +7,16 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="055bd475-f851-45e7-bb6f-29383b5aebff" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<sub-flow name="sflow" doc:id="149d5fca-9077-4012-83b9-eecb31b2f322" >
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="5d3553b9-081e-413e-b15b-23043007f56a" />
+		<flow-ref doc:name="Flow Reference" doc:id="a87d43a2-286c-48b2-874f-0ec18265040a" name="payload" />
+	</sub-flow>
+	<sub-flow name="payload" doc:id="deb2bffe-d24e-4feb-a17f-737567439041" >
+		<http:request method="GET" doc:name="Request" doc:id="97dcc67c-ae31-4ab2-8315-7efa33f5ae5c" />
+	</sub-flow>
 	<flow name="debugger_demoFlow" doc:id="fd283c84-da03-4247-98ea-704fa6188945" >
 		<http:listener doc:name="Listener" doc:id="9f1decf7-cd94-4d4b-9c7c-5c39338c204e" config-ref="HTTP_Listener_config" path="/goodbye"/>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="5d3553b9-081e-413e-b15b-23043007f56a" />
-		<http:request method="GET" doc:name="Request" doc:id="97dcc67c-ae31-4ab2-8315-7efa33f5ae5c" />
+		<flow-ref doc:name="Flow Reference" doc:id="f5dc8823-55e3-48d7-b5aa-fd67ce76543c" name="sflow" />
 		<logger level="INFO" doc:name="Logger" doc:id="0b6e027b-c6b0-45eb-8c8f-45dd95fe09d4" />
 	</flow>
 </mule>
