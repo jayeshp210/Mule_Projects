@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="dd5a2f60-1a4d-4722-93fc-75dccc03b458" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="0a83e403-868d-4576-8d67-ba66cbbe2811" file="global.xml" />
+	<flow name="error-handlingFlow-" doc:id="a18a525f-d22c-4bdb-81b1-e70cb4f88ebe" >
+		<http:listener doc:name="Listener : /global" doc:id="e3006c9e-7ee4-4fdb-a413-fc69a88e2490" config-ref="HTTP_Listener_config1" path="/global" />
+		<set-payload value='#["Jayesh"]' doc:name="Set Payload" doc:id="a4c9b999-7cbb-4133-a819-3bd80a3918d8" />
+		<flow-ref doc:name="Flow Reference" doc:id="4208a6de-d688-4e3d-9241-06ab33e61a7e" name="private" />
+		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="8b8f8794-1185-499f-a923-780956909032" />
+	</flow>
+	<flow name="private" doc:id="a71e5797-b399-4370-ac64-4625c04d486e" >
+		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="a247fe18-5eb8-4188-9f4e-040a3149c7a4" value="#[payload]" />
+		<error-handler >
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="ef254bb4-a811-40f7-9fcf-742c5a1d6e0e" >
+				<set-payload value='#["Error private flow"]' doc:name='Set "Error private flow"' doc:id="5585f000-0b85-4a1e-993b-c48718055a6b" />
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+</mule>

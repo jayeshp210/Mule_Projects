@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="0e3871a9-12c2-4642-811c-82c6838f9dc0" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="Tryblock" doc:id="53718f2a-02d2-4deb-9185-237c8f12e58a">
+		<http:listener doc:name="Listener" doc:id="24571143-f7f6-4744-8a79-6623f1a48814" config-ref="HTTP_Listener_config" path="/try" />
+		<try doc:name="Try" doc:id="8f6c5f7f-c725-415a-9a26-ed58f9605729">
+			<validation:is-null doc:name="Is null" doc:id="d8d3e318-85ca-4149-a7f9-e1762e3f0580" value="payload" />
+			<error-handler>
+				<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="e0ae7e3d-7b77-4363-8b65-c5ce7d66093f">
+					<set-payload value='#["ERROR 1"]' doc:name='"ERROR 1"' doc:id="1b51479d-d289-4598-be65-9f44754db180" />
+				</on-error-continue>
+			</error-handler>
+		</try>
+		<set-payload value='#["END"]' doc:name='"END"' doc:id="299e1e5d-04e2-4c35-aa80-2fb0788c65a7" />
+		<logger level="INFO" doc:name="Logger" doc:id="2c03f147-bc86-4329-97e8-7ccfce0b469f" message="#[payload]" />
+		<error-handler>
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="5b2f62d4-b1dd-4a96-a482-7b6e6e7fb027">
+				<set-payload value='#["ERROR 2"]' doc:name='"ERROR 2"' doc:id="acba0a2c-6d6b-497e-96d2-911aadee569b" />
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="error-handlingFlow-1" doc:id="c951ad4a-4df2-47fd-8320-d0e2a162182e">
+		<http:listener doc:name="Listener : /validate1" doc:id="1429c023-cb19-47a9-807d-c3f97c7498b3" config-ref="HTTP_Listener_config" path="/validate1" />
+		<set-payload value='#["Jayesh"]' doc:name="Set Payload" doc:id="72673bb0-fdb7-4883-ab6d-995c167bc58a" />
+		<flow-ref doc:name="Flow Reference" doc:id="77c607cb-5fca-4568-8fcc-be8822fb98c0" name="privateflow1"/>
+		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="fab18013-f04a-4908-b258-a9dace912c37" />
+		<logger level="INFO" doc:name="Logger" doc:id="cff9c3b6-8a42-4e34-a4c6-1da448e9ac4d" message="#[payload]"/>
+		<error-handler>
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="b11d4c08-d055-4c52-8971-edda4681f45c" >
+				<set-payload value='#["Error main flow"]' doc:name='"Error main flow"' doc:id="1b7f8eb1-ed72-47e0-be3a-23012d367ef4" />
+			</on-error-continue>
+		</error-handler>
+	</flow>
+	<flow name="privateflow1" doc:id="155e1078-4ac1-4df2-8688-faaa1dfae7a6" >
+		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="f2a0a00c-285a-4534-bf8d-d60fc4eb3176" value="#[payload]" />
+		<error-handler>
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="f8442f92-076a-4093-904a-65b0617b0abb" >
+				<set-payload value='#["Error private flow"]' doc:name='Set "Error private flow"' doc:id="0488c925-dc25-4be6-9e16-d79bfe6fcba9" />
+			</on-error-continue>
+		</error-handler>
+	</flow>
+	<flow name="error-handlingFlow-2" doc:id="798a436c-db0c-4a34-bc39-456bb66371d3" >
+		<http:listener doc:name="Listener : /validate2" doc:id="ba90c28d-ae94-478a-8eae-8ba13cbf3167" config-ref="HTTP_Listener_config" path="/validate2" />
+		<set-payload value='#["Jayesh"]' doc:name="Set Payload" doc:id="e6bd2c2a-bf4c-4460-9801-29a9ad57939d" />
+		<flow-ref doc:name="Flow Reference" doc:id="084a4c86-c842-42b6-9a5e-e6ca88cab847" name="privateflow2" />
+		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="454d9e9c-7145-4d0d-82ce-189f231eb8ec" />
+		<logger level="INFO" doc:name="Logger" doc:id="25978b77-48a5-452d-a305-c05794160857" message="#[payload]" />
+		<error-handler >
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="a818c146-a03a-4606-948c-202ed2c1ef2e" >
+				<set-payload value='#["Error main flow"]' doc:name='"Error main flow"' doc:id="f11d5456-42ef-46fb-b5d8-8d5721f23357" />
+			</on-error-continue>
+		</error-handler>
+	</flow>
+	<flow name="privateflow2" doc:id="2097979d-dfe8-4d31-a597-ddd60b5112b2">
+		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="137fc7c8-53a9-4181-9231-a66d1b32a557" value="#[payload]" />
+		<error-handler>
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="00c2ac66-f1bb-4a07-a500-54cbf2d71469">
+				<set-payload value='#["Error private flow"]' doc:name='Set "Error private flow"' doc:id="cbad1b04-a61e-4b0e-8828-b839661def91" />
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="error-handlingFlow-3" doc:id="bcd15aba-32c3-40e6-81c3-9a2734cc915b" >
+		<http:listener doc:name="Listener : /validate3" doc:id="f2b817a8-5da5-49e4-9380-48855ec184a3" config-ref="HTTP_Listener_config" path="/validate3" />
+		<set-payload value='#["Jayesh"]' doc:name="Set Payload" doc:id="5f6c5d30-44e3-4a7c-8c4e-bbcf1c91ea71" />
+		<flow-ref doc:name="Flow Reference" doc:id="4e2ebcd8-0547-44c5-93d0-b96693778a19" name="privateflow3" />
+		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="e5db0cf3-5a70-4cca-97b7-dffa8f536d7f" />
+		<logger level="INFO" doc:name="Logger" doc:id="039b5b10-b355-4944-aae3-0075af2f7c63" message="#[payload]" />
+		<error-handler >
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="b4c042c0-1135-46b9-9f2a-4f0414952581" >
+				<set-payload value='#["Error main flow"]' doc:name='"Error main flow"' doc:id="12f95c44-480a-4706-8c46-d4768a272ff9" />
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="privateflow3" doc:id="1a89b8f1-fc7c-44c6-a294-29c11277bcc3">
+		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="a687d818-c914-4443-8191-b46d7aefac0d" value="#[payload]" />
+		<error-handler>
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="b2769617-c436-4e56-b0e5-850b3a9fa3e2">
+				<set-payload value='#["Error private flow"]' doc:name='Set "Error private flow"' doc:id="d92296cb-b1a5-4bb7-80d3-81b436052c4b" />
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="error-handlingFlow-4" doc:id="d3f13fba-fef5-43bd-ae70-f405843e9090" >
+		<http:listener doc:name="Listener : /validate4" doc:id="2f98f796-17d9-4d92-a77c-84d4fdd18ad6" config-ref="HTTP_Listener_config" path="/validate4" />
+		<set-payload value='#["Jayesh"]' doc:name="Set Payload" doc:id="edee48b6-a363-4150-be67-1127e3e23332" />
+		<flow-ref doc:name="Flow Reference" doc:id="5cac589c-07bc-4235-b9ab-47b53483978a" name="privateflow4" />
+		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="baa38c83-3fd6-41e3-90e5-e3f5979ac98b" />
+		<logger level="INFO" doc:name="Logger" doc:id="15e23356-3761-4782-9bac-21759f42e799" message="#[payload]" />
+		<error-handler >
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="5b4a31d2-2742-4474-8255-f0fd0fa8a57c" >
+				<set-payload value='#["Error main flow"]' doc:name='"Error main flow"' doc:id="7334b753-2c4e-4c8d-8d51-63ef4fdcc0d1" />
+			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="privateflow4" doc:id="d234cfc1-05f3-44ec-8576-68513762efb4" >
+		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="a4a8382f-292d-4a9d-a8cf-c5580cff97c5" value="#[payload]" />
+		<error-handler >
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="33c83578-1ecc-4e83-bb9d-fe604b5afd46" >
+			</on-error-continue>
+		</error-handler>
+	</flow>
+</mule>
