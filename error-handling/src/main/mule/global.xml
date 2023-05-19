@@ -3,9 +3,9 @@
 <mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
-	<error-handler name="globalError_Handler" doc:id="678b22cf-9ca6-4ea4-b7be-e362bec24d0d" >
-		<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="d5902387-feed-4432-b271-1fa2d34d7360" >
-			<set-payload value='#["Global errror Handler"]' doc:name='"Global errror Handler"' doc:id="7f467560-7d46-46f4-886a-7150821b73e9" />
+	<error-handler name="globalError_Handler" doc:id="e1db417f-a9b0-4929-b589-5f3d8da9bc82" >
+		<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="2e40bc0d-8c8d-4ef1-a5d8-3267be617dcc" >
+			<set-payload value='#["Global Handler"]' doc:name='"Global Handler"' doc:id="1363c400-389b-473d-be96-ce3395cdb5a9" />
 		</on-error-continue>
 	</error-handler>
 </mule>

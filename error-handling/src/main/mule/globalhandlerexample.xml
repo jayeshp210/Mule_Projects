@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns:http="http://www.mulesoft.org/schema/mule/http"
-	xmlns="http://www.mulesoft.org/schema/mule/core"
-	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:validation="http://www.mulesoft.org/schema/mule/validation"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
-http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="dd5a2f60-1a4d-4722-93fc-75dccc03b458" >
 		<http:listener-connection host="0.0.0.0" port="8082" />
 	</http:listener-config>
-	<configuration-properties doc:name="Configuration properties" doc:id="0a83e403-868d-4576-8d67-ba66cbbe2811" file="global.xml" />
+	<configuration doc:name="Configuration" doc:id="10086337-3106-465c-9228-08e1d0e3f9a4" defaultErrorHandler-ref="globalError_Handler" />
 	<flow name="error-handlingFlow-" doc:id="a18a525f-d22c-4bdb-81b1-e70cb4f88ebe" >
 		<http:listener doc:name="Listener : /global" doc:id="e3006c9e-7ee4-4fdb-a413-fc69a88e2490" config-ref="HTTP_Listener_config1" path="/global" />
 		<set-payload value='#["Jayesh"]' doc:name="Set Payload" doc:id="a4c9b999-7cbb-4133-a819-3bd80a3918d8" />
-		<flow-ref doc:name="Flow Reference" doc:id="4208a6de-d688-4e3d-9241-06ab33e61a7e" name="private" />
-		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="8b8f8794-1185-499f-a923-780956909032" />
-	</flow>
-	<flow name="private" doc:id="a71e5797-b399-4370-ac64-4625c04d486e" >
 		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="a247fe18-5eb8-4188-9f4e-040a3149c7a4" value="#[payload]" />
+		<set-payload value='#["Success - main flow"]' doc:name='"Success - main flow"' doc:id="8b8f8794-1185-499f-a923-780956909032" />
 		<error-handler >
-			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="ef254bb4-a811-40f7-9fcf-742c5a1d6e0e" >
-				<set-payload value='#["Error private flow"]' doc:name='Set "Error private flow"' doc:id="5585f000-0b85-4a1e-993b-c48718055a6b" />
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="3adecab9-1b2d-4620-9ab7-05badaecd3b2" >
+				<set-payload value='#["Error Main flow"]' doc:name='Set "Error Main flow"' doc:id="5585f000-0b85-4a1e-993b-c48718055a6b" />
 			</on-error-propagate>
+		</error-handler>
+	</flow>
+	<flow name="globalhandlerexampleFlow" doc:id="0321c7fe-c637-47f9-87f7-87cfbf6dc056" >
+		<http:listener doc:name="GET : /gb" doc:id="645ed1b0-189b-42c3-b24c-c49f52f6b382" config-ref="HTTP_Listener_config" path="/gb"/>
+		<set-payload value='#["Main"]' doc:name='"Main"' doc:id="4dcaae01-65d8-4fb6-b884-9f9c90552098" />
+		<ee:transform doc:name="Transform Message" doc:id="fddc7d0d-357e-495a-b392-4af7933f6b7c" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
+---
+"Response" ++ payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<error-handler >
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="58fb8764-51f6-4068-8693-97d3b28f3800" type="HTTP:NOT_FOUND">
+				<set-payload value='#["HTTP : NOT FOUND"]' doc:name='"HTTP : NOT FOUND"' doc:id="1044a9df-3200-47c7-b9d2-1aa18295eefe" />
+			</on-error-continue>
 		</error-handler>
 	</flow>
 </mule>

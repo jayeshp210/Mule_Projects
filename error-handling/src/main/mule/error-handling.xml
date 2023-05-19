@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mu
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<flow name="Tryblock" doc:id="53718f2a-02d2-4deb-9185-237c8f12e58a">
-		<http:listener doc:name="Listener" doc:id="24571143-f7f6-4744-8a79-6623f1a48814" config-ref="HTTP_Listener_config" path="/try" />
+		<http:listener doc:name="Listener /try" doc:id="24571143-f7f6-4744-8a79-6623f1a48814" config-ref="HTTP_Listener_config" path="/try" />
 		<try doc:name="Try" doc:id="8f6c5f7f-c725-415a-9a26-ed58f9605729">
 			<validation:is-null doc:name="Is null" doc:id="d8d3e318-85ca-4149-a7f9-e1762e3f0580" value="payload" />
 			<error-handler>
@@ -102,6 +102,24 @@ http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mu
 		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="a4a8382f-292d-4a9d-a8cf-c5580cff97c5" value="#[payload]" />
 		<error-handler >
 			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="33c83578-1ecc-4e83-bb9d-fe604b5afd46" >
+			</on-error-continue>
+		</error-handler>
+	</flow>
+	<flow name="Tryblock-2" doc:id="1728c3aa-0c69-4cad-b611-aca5b9d53686" >
+		<http:listener doc:name="Listener /try2" doc:id="bea6a72f-f3c1-4222-a1a5-23401ff9e7e6" config-ref="HTTP_Listener_config" path="/try2" />
+		<try doc:name="Try" doc:id="b372a7b0-7bff-40ad-bbea-bb2b0eb0bfa9" >
+			<validation:is-null doc:name="Is null" doc:id="5687bf5e-ff50-454a-9d74-71df0b9287d3" value="payload" />
+			<error-handler >
+				<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="f23b98b7-4a1a-4dd3-ae28-52e1aa4b710b" >
+					<set-payload value='#["ERROR 1"]' doc:name='"ERROR 1"' doc:id="c5088385-26c3-4e59-acd6-fcfb43ecb34b" />
+				</on-error-propagate>
+			</error-handler>
+		</try>
+		<set-payload value='#["END"]' doc:name='"END"' doc:id="84ad671e-5a3d-4c76-9f64-af0200ba40b1" />
+		<logger level="INFO" doc:name="Logger" doc:id="9f69faeb-f3b7-4a23-976f-b1bb58b8a5e4" message="#[payload]" />
+		<error-handler >
+			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="249e7a55-8d7a-4804-8b4b-966ff0d724b4" >
+				<set-payload value='#["ERROR 2"]' doc:name='"ERROR 2"' doc:id="264c43de-ec71-448a-ad68-bc8b32117623" />
 			</on-error-continue>
 		</error-handler>
 	</flow>
