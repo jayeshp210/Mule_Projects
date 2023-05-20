@@ -7243,3 +7243,250 @@ Binding(F3,
 
 !ENTRY org.mule.tooling.maven 1 0 2023-05-19 11:56:07.755
 !MESSAGE  *** 2494 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 16:58:00.567
+!MESSAGE  *** 2340 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:02:26.188
+!MESSAGE  *** 2888 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:06:29.167
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 15240]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:06:29.516
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 15240]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:06:29.995
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 15240]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:06:29.995
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 14668]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:06:30.071
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 14668]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:06:30.585
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 14668]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:06:37.704
+!MESSAGE  *** 7030 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.eclipse.jface 2 0 2023-05-19 17:07:46.282
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-19 17:07:46.282
+!MESSAGE A conflict occurred for CTRL+Z:
+Binding(CTRL+Z,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.debug.ui.commands.eof"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,win32,system)
+Binding(CTRL+Z,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.undo,Undo,
+		Undo the last operation,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.undo"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+Z,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.undoCommand,Undo Mapping Command,
+		Undo Mapping Command,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.ui.dfl.contribution.commands.undoCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:07:49.205
+!MESSAGE  *** 6590 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:09:05.635
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 22828]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:09:05.688
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 22828]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:09:06.026
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 22828]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:09:06.029
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 11476]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:09:06.078
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 11476]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:09:06.411
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 11476]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:09:50.495
+!MESSAGE  *** 1477 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:11:15.007
+!MESSAGE  *** 4479 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:11:49.972
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 13008]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:11:50.024
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 13008]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:11:50.331
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 13008]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:11:50.336
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 11388]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:11:50.387
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 11388]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:11:50.694
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 11388]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:12:16.429
+!MESSAGE  *** 1593 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2023-05-19 17:12:32.305
+!MESSAGE There was a problem while sending events to Amplitude
+!STACK 0
+com.mulesoft.telemetry.SendBundleException: HTTP POST failed
+	at com.mulesoft.telemetry.TelemetryHttpClient.send(TelemetryHttpClient.java:109)
+	at com.mulesoft.telemetry.DefaultTelemetryService.send(DefaultTelemetryService.java:234)
+	at com.mulesoft.telemetry.DefaultTelemetryService.sendEvents(DefaultTelemetryService.java:226)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.http.NoHttpResponseException: studio-metrics-report.cloudhub.io:443 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at com.mulesoft.telemetry.TelemetryHttpClient.send(TelemetryHttpClient.java:107)
+	... 8 more
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:14:37.176
+!MESSAGE  *** 4533 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:15:39.610
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 24956]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:15:39.685
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 24956]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:15:40.021
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 24956]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:15:40.024
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 12540]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 17:15:40.080
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 12540]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 17:15:40.399
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 12540]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:15:50.094
+!MESSAGE  *** 4640 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 17:19:23.787
+!MESSAGE  *** 4292 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-19 18:03:54.793
+!MESSAGE Creating MUnit Recorder temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-recorder
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 18:06:35.003
+!MESSAGE  *** 2556 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=null, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 18:07:02.846
+!MESSAGE  *** 5225 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-19 18:07:09.471
+!MESSAGE  *** 6079 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 18:08:34.842
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 24516]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 18:08:34.945
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 24516]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 18:08:35.451
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 24516]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 18:08:35.457
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 16084]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2023-05-19 18:08:35.535
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 16084]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2023-05-19 18:08:35.951
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 16084]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-19 18:15:09.859
+!MESSAGE Deleting MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+!SESSION 2023-05-20 11:24:06.524 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.18
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2023-05-20 11:24:13.406
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-20 11:24:13.406
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2023-05-20 11:24:15.362
+!MESSAGE Creating MUnit temporary folder in C:\Users\JAYPALIW\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-20 11:24:21.668
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\JAYPALIW'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-20 11:24:23.922
+!MESSAGE Mule Version 4.4.0-20230417, was mapped to Tooling Version 4.4.0-20230417
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-20 11:24:36.285
+!MESSAGE Started tooling v[4.4.0] with timeout [90s] at path:
+C:\AnypointStudio\configuration\org.eclipse.osgi\716\data\.runtimes\tooling-3smuiwtt
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-20 11:25:12.885
+!MESSAGE Checking updates in Exchange for: [org.mule.connectors:mule-sockets-connector, org.mule.modules:mule-validation-module, org.mule.connectors:mule-http-connector]
+
+!ENTRY org.mule.tooling.core 1 0 2023-05-20 11:25:17.518
+!MESSAGE Check finished: there are updates for some Mule Modules
+
+!ENTRY org.mule.tooling.maven 1 0 2023-05-20 11:25:21.449
+!MESSAGE  *** 10411 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\apache-maven-3.9.0-bin\apache-maven-3.9.0, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
