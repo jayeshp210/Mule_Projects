@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="global-propertyFlow" doc:id="4f530e65-49c1-4932-98de-23ed406c1193" >
+		<http:listener doc:name="Listener" doc:id="d8ef790e-8f45-404e-a02a-661796638812" config-ref="HTTP_Listener_config" path="/gb"/>
+		<logger level="INFO" doc:name="Logger" doc:id="61e625ff-3778-4899-95a9-fa43cb9fef0c" message='#["Hello mule"]'/>
+	</flow>
+</mule>

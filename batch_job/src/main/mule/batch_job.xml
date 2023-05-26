@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:batch="http://www.mulesoft.org/schema/mule/batch"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="310a2ad1-b117-48df-b3c8-0269343b4198" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="batch_jobFlow" doc:id="28c2ed24-1768-45db-abd6-335016ef5865" >
+		<http:listener doc:name="Listener" doc:id="76b32aae-04b3-4c00-a8fe-6c1e93f7f52e" config-ref="HTTP_Listener_config" path="/ladai"/>
+		<set-payload value='#[[&#10;	{&#10;		"name":"productA",&#10;		"amount":100,&#10;		"price":"200"&#10;	},&#10;	{&#10;		"name":"productB",&#10;		"amount":40,&#10;		"price":"400"&#10;	},&#10;	{&#10;		"name":"productC",&#10;		"amount":2,&#10;		"price":"600"&#10;	}&#10;]]' doc:name="Set Payload" doc:id="64b74b92-c1d2-40f7-9572-2db2c0d69134" />
+		<batch:job jobName="batch_jobBatch_Job" doc:id="6d258536-ca92-41e9-8e62-11abacca048a" >
+			<batch:process-records >
+				<batch:step name="Less_than_50" doc:id="1c94847c-92cc-4344-a8af-50af41b939de" acceptExpression="payload.amount &lt; 50">
+					<set-payload value='#[{&#10;	"amount":payload.amount + 100&#10;}]' doc:name="Set Payload" doc:id="5124f0e7-08c8-45d6-98b1-cf9f4be97fbc" />
+					<logger level="INFO" doc:name="Logger" doc:id="af6da711-6bf8-44cd-82bc-27da06d5fac0" message="#[payload]"/>
+				</batch:step>
+				<batch:step name="Greater_than_20" doc:id="cb8cf68a-0540-4cee-bbce-979702e7b9ae" acceptExpression="payload.amount &gt; 20">
+					<set-payload value='#[{&#10;	"step2amount":payload.amount &#10;}]' doc:name="Set Payload" doc:id="e65d23c9-0558-43ef-ab2c-5231a8072496" />
+					<logger level="INFO" doc:name="Logger" doc:id="0d164eba-ca3c-4016-b7d8-ec1bfffddb71" message="#[payload]"/>
+				</batch:step>
+			</batch:process-records>
+		</batch:job>
+		<logger level="INFO" doc:name="Logger" doc:id="d06dbffc-575f-4de7-891b-135f8df84b85" message="#[payload]" />
+	</flow>
+</mule>

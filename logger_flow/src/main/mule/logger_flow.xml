@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="55080277-6b86-4797-bb00-64f423db5d92" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="logger_flowFlow" doc:id="281bcf7a-c7f6-4882-bc40-7e2f5f98830d" >
+		<http:listener doc:name="Listener GET /log" doc:id="f025be1a-991d-4521-ac9a-617cd3cf46cc" config-ref="HTTP_Listener_config" path="/log"/>
+		<set-payload value='#[{&#10;	val:"Jayesh"&#10;}]' doc:name="Set Payload (XML)" doc:id="99ec0881-be02-4606-a5c2-2965cb3ce82f" />
+		<logger level="INFO" doc:name="Logger" doc:id="41ffc395-9969-45a0-bca4-76015965ef94" message="The payload is: #[payload]"/>
+	</flow>
+</mule>
