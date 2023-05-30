@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="inputexcell" format="excel">
+      <types:shape format="weave"><![CDATA[%dw 2.0
+
+type inputexcell = {|
+  Sheet1?: Array<{|    column_0: String,     column_1: String,     column_2: String,     column_3: String  |}>
+|}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="jsondata" format="json">
+      <types:shape format="weave" example="examples/hi-1.json"><![CDATA[%dw 2.0
+
+type jsondata = {|
+  Sheet1: Array<{|    personName: String,     personCity: String,     personAadhar: Number {"typeId": "double"},     personZipcode: Number {"typeId": "double"}  |}>
+|} {"example": "{\\\"Sheet1\\\":[{\\\"personName\\\":\\\"Jayesh\\\",\\\"personCity\\\":\\\"Baran\\\",\\\"personAadhar\\\":123456.0,\\\"personZipcode\\\":325205.0},{\\\"personName\\\":\\\"Ayush\\\",\\\"personCity\\\":\\\"dhanbad\\\",\\\"personAadhar\\\":123456.0,\\\"personZipcode\\\":325342.0},{\\\"personName\\\":\\\"Arush\\\",\\\"personCity\\\":\\\"Rewa\\\",\\\"personAadhar\\\":123456.0,\\\"personZipcode\\\":242344.0}]}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#4d024c9a-a22a-4457-be30-9883f060b88c">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="jsondata"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+  <types:enrichment select="#f854159f-4e9b-4cc3-860c-07bdb07b1369">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="jsondata"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

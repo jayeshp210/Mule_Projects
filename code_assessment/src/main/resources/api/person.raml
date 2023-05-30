@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: Person
+
+/person:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include Person_example.raml
+    /{person_name}:
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include Person_example.raml

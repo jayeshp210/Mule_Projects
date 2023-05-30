@@ -1,0 +1,21 @@
+#%RAML 1.0
+title: Person-data-papi
+
+/person-data:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: {"status":200 }
+    post:
+      responses:
+        200:
+          body:
+            application/json:
+              example: {
+                "employeeContact": 9079611709,
+                "employeeAddress": "Kota, Rajasthan",
+                "employeeId": 111,
+                "employeeName": "Paliwal"
+                        }

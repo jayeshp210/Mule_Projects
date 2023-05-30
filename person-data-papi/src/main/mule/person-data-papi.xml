@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd ">
+    <apikit:config name="person-data-papi-config" api="person-data-papi.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+    <http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e94cea9f-c6e3-45ad-880e-324a4a576891" >
+		<http:listener-connection host="0.0.0.0" port="8083" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="2be760e3-4697-4e9f-b1ce-87739c67db7e" basePath="/api" >
+		<http:request-connection host="localhost" port="8081" />
+	</http:request-config>
+	<http:request-config name="HTTP_Request_configuration1" doc:name="HTTP Request configuration" doc:id="9f0cd00f-2433-4750-b47e-81d125cf8eff" basePath="/api" >
+		<http:request-connection host="localhost" port="8082" />
+	</http:request-config>
+	<flow name="person-data-papi-main">
+        <http:listener config-ref="HTTP_Listener_config" path="/api/*">
+            <http:response statusCode="#[vars.httpStatus default 200]">
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:response>
+            <http:error-response statusCode="#[vars.httpStatus default 500]">
+                <http:body>#[payload]</http:body>
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:error-response>
+        </http:listener>
+        <apikit:router config-ref="person-data-papi-config" />
+        <error-handler>
+            <on-error-propagate type="APIKIT:BAD_REQUEST">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Bad request"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">400</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_FOUND">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Resource not found"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:METHOD_NOT_ALLOWED">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Method not allowed"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">405</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_ACCEPTABLE">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Not acceptable"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">406</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:UNSUPPORTED_MEDIA_TYPE">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Unsupported media type"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">415</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_IMPLEMENTED">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Not Implemented"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">501</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+    </flow>
+    <flow name="person-data-papi-console">
+        <http:listener config-ref="HTTP_Listener_config" path="/console/*">
+            <http:response statusCode="#[vars.httpStatus default 200]">
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:response>
+            <http:error-response statusCode="#[vars.httpStatus default 500]">
+                <http:body>#[payload]</http:body>
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:error-response>
+        </http:listener>
+        <apikit:console config-ref="person-data-papi-config" />
+        <error-handler>
+            <on-error-propagate type="APIKIT:NOT_FOUND">
+                <ee:transform doc:name="Transform Message">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Resource not found"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+    </flow>
+    <flow name="get:\person-data:person-data-papi-config">
+		<set-variable value="#[attributes.queryParams.name]" doc:name="Set Variable" doc:id="4d8c0a85-f15b-434c-aba8-20aebd86d718" variableName="name"/>
+		<scatter-gather doc:name="Scatter-Gather" doc:id="12a1f814-352e-4219-b976-bc9e8b74bf8a" >
+			<route >
+				<http:request method="GET" doc:name="Request /employee" doc:id="b2c588c4-32eb-4ad7-bbda-dcf72a5f26b0" config-ref="HTTP_Request_configuration" path="/employee/{person_name}">
+			<http:uri-params><![CDATA[#[output application/java
+---
+{
+	person_name : vars.name
+}]]]></http:uri-params>
+		</http:request>
+			</route>
+			<route >
+				<http:request method="GET" doc:name="Request /person" doc:id="54e05c18-f65c-41d3-bba0-51efd0664fd4" config-ref="HTTP_Request_configuration1" path="/person/{person_name}">
+			<http:uri-params><![CDATA[#[output application/java
+---
+{
+	person_name : vars.name
+}]]]></http:uri-params>
+		</http:request>
+			</route>
+		</scatter-gather>
+		<ee:transform doc:name="Transform Message">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload..payload]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+    <flow name="post:\person-data:person-data-papi-config">
+        <http:request method="POST" doc:name="Request" doc:id="aeb31d4b-4e3f-4e21-bf8d-ff2ce393b0a4" config-ref="HTTP_Request_configuration" path="/employee"/>
+		<ee:transform doc:name="Transform Message">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+</mule>
